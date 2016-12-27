@@ -20,7 +20,7 @@
   <parent>
     <groupId>nz.co.idevelop.flex</groupId>
     <artifactId>flex-application-parent</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.2-SNAPSHOT</version>
   </parent>
 
   <groupId>starling.extension</groupId>
@@ -41,7 +41,7 @@
             <extensions>true</extensions>
             <dependencies>
                 <dependency>
-                    <groupId>com.adobe.flex</groupId>
+                    <groupId>org.apache.flex</groupId>
                     <artifactId>compiler</artifactId>
                     <version>${flex.version}</version>
                     <type>pom</type>
@@ -58,14 +58,18 @@
   </build>
 
   <dependencies>
+      <!-- Flex SDK dependencies -->
       <dependency>
-          <groupId>com.adobe.air.framework</groupId>
-          <artifactId>common-framework</artifactId>
+          <groupId>org.apache.flex</groupId>
+          <artifactId>framework</artifactId>
+          <version>${flex.version}</version>
           <type>pom</type>
       </dependency>
+      <!-- Air SDK dependencies -->
       <dependency>
-          <groupId>com.adobe.flex.framework.air</groupId>
-          <artifactId>air-framework</artifactId>
+          <groupId>org.apache.flex.framework</groupId>
+          <artifactId>air</artifactId>
+          <version>${flex.version}</version>
           <type>pom</type>
       </dependency>
       <dependency>
@@ -73,11 +77,12 @@
           <artifactId>starling-framework</artifactId>
           <type>swc</type>
       </dependency>
-      <dependency>
-          <groupId>com.adobe.flash.framework</groupId>
-          <artifactId>playerglobal</artifactId>
-          <type>swc</type>
-      </dependency>
+        <dependency>
+            <groupId>com.adobe.flash.framework</groupId>
+            <artifactId>playerglobal</artifactId>
+            <version>20.0</version>
+            <type>swc</type>
+        </dependency>
       <dependency>
           <groupId>com.adobe.flexunit</groupId>
           <artifactId>flexunit</artifactId>
